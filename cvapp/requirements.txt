@@ -1,0 +1,7 @@
+gunicorn
+Pillow
+torch
+numpy
+torchvision
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MNIST</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet"></head>
+  <body  class='disable-select'>
+    <p id="title">JUST DRAW ANY DIGIT</p>
+    <div id="containter">    
+      <div id="canvasarea"><canvas id="myCanvas" width="500" height="500" style="border:2px solid #494747;"></canvas>
+        </div>
+      </div>
+      <div id="answerarea"></div>
+   </div>
+        <div id="buttonarea">
+          <img id='erase' class='erase_button' src="static/rotate.png" height=100 width=100 onclick="erase()">
+          <a href="/" ><img class='home_button' src="static/home.png" height=100 width=100></a>
+        </div>
+    </div>
+    
+    <br><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/drawing.js"></script>
+  </body>
+</html>
