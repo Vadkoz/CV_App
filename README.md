@@ -6,3 +6,6 @@ Simple pet-project, consist of three tasks: mnist digit recognition, detection p
 
 App uses docker containing Flask. 
 Models are written in PyThorch. 
+
+
+Test demo available [here](https://evening-ravine-67035.herokuapp.com/)
