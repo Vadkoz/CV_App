@@ -8,4 +8,4 @@ App uses docker containing Flask.
 Models are written in PyThorch. 
 
 
-Test demo available [here](https://evening-ravine-67035.herokuapp.com/)
+Test demo available [here](https://evening-ravine-67035.herokuapp.com/). May open for a long time, due to heroku's politics for free accounts.
