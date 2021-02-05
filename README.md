@@ -6,12 +6,12 @@ This repo contains a simple app, that combines different tasks in Computer Visio
 ## Tasks
 ### MNIST Digit Recognition
 Digit recognition task represents a simple drawing application with CNN-based prediction model.
-![Image]('/assets/mnist.jpg')
+![Image]('https://github.com/Vadkoz/cv_app/tree/master/assets/mnist.jpg')
 
 ### Guns and Knives Detection
 For the detection task, I used an [SSD model](https://arxiv.org/abs/1512.02325) and trained it from scratch.
 Dataset for this task - [Guns and Knives](https://github.com/ari-dasci/OD-WeaponDetection/tree/master/Weapons%20and%20similar%20handled%20objects).
-![Image]('/assets/gun.jpg')
+![Image]('https://github.com/Vadkoz/cv_app/tree/master/assets/gun.jpg')
 ## Technologies
 - Web part was build with **Flask, JQuery, Docker**.
 - Deep Learning part was developed with **PyTorch, NumPy**.
