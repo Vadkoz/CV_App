@@ -5,7 +5,7 @@ from math import sqrt
 from itertools import product as product
 import torchvision
 
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class VGGBase(nn.Module):
     """

@@ -1,1 +1,5 @@
 .git/
+.gitignore
+comands.bm
+__pycache__/
+assets/

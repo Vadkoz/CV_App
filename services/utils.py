@@ -5,7 +5,7 @@ import random
 import xml.etree.ElementTree as ET
 import torchvision.transforms.functional as FT
 
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Label map
 labels = ('background', 'purse', 'card', 'knife', 'bill', 'smartphone', 'pistol')

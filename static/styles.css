@@ -128,3 +128,25 @@ a {
   -ms-user-select: none;      
   user-select: none;
 }
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+
+  cursor: pointer;
+  width: 155px;
+  border: none;
+  background: #5F616E;
+  color: #ffffff;
+  font-weight: 150;
+  padding: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#ssd_butt{
+  margin-top: 20px;
+}

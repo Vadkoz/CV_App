@@ -5,10 +5,16 @@
     <link rel="stylesheet" href="static/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">  </head>
   <body class='disable-select'>
-      <input type="file" id="image" multiple accept="image/*,image/jpeg">
-      <button type=button onclick='test()'>Display</button></br>
+      
+      <label class="custom-file-upload">
+        <input type="file" id="image">
+        Choose file
+    </label>
+    <div><button type=button id='ssd_butt' onclick='detect()'>DETECT</button></br></div>
+      
      <img id="det_img" src="" width='500'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/ssd.js"></script>
   </body>
 </html>
+

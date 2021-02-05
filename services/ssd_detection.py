@@ -654,15 +654,15 @@ class MultiBoxLoss(nn.Module):
         return conf_loss + self.alpha * loc_loss
 
 
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 resize = transforms.Resize((300, 300))
 to_tensor = transforms.ToTensor()
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                  std=[0.229, 0.224, 0.225])
                                 
-state_dict = torch.load('services/ssd_state', map_location=torch.device('cpu'))
-vgg = torch.load('services/vgg_state', map_location=torch.device('cpu'))
+state_dict = torch.load('services/ssd_state', map_location=device)
+vgg = torch.load('services/vgg_state', map_location=device)
 model = SSD300(7, vgg)
 model.load_state_dict(state_dict)
 model.type(torch.FloatTensor)
@@ -695,7 +695,7 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
                                                              max_overlap=max_overlap, top_k=top_k)
 
     # Move detections to the CPU
-    det_boxes = det_boxes[0].to('cpu')
+    det_boxes = det_boxes[0].to(device)
 
     # Transform to original image dimensions
     original_dims = torch.FloatTensor(
@@ -703,7 +703,7 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     det_boxes = det_boxes * original_dims
 
     # Decode class integer labels
-    det_labels = [rev_label_map[l] for l in det_labels[0].to('cpu').tolist()]
+    det_labels = [rev_label_map[l] for l in det_labels[0].to(device).tolist()]
 
     # If no objects found, the detected labels will be set to ['0.'], i.e. ['background'] in SSD300.detect_objects() in model.py
     if det_labels == ['background']:

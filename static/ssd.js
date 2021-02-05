@@ -12,7 +12,7 @@ var download = function(img){
 	  });
   }
 
-var test = function() {
+var detect = function() {
 	var file = document.getElementById('image').files[0];
 	var reader  = new FileReader();
 	reader.onload = function(e)  {
@@ -21,3 +21,5 @@ var test = function() {
 	 }
 	 reader.readAsDataURL(file);
  }
+
+ 

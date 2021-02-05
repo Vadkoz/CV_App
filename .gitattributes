@@ -1,0 +1,2 @@
+services/vgg_state filter=lfs diff=lfs merge=lfs -text
+services/ssd_state filter=lfs diff=lfs merge=lfs -text
